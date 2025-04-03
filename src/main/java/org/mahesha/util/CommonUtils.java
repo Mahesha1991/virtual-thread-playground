@@ -11,4 +11,11 @@ public class CommonUtils {
             throw new RuntimeException(e);
         }
     }
+
+    public static long timer(Runnable runnable){
+        long start = System.currentTimeMillis();
+        runnable.run();
+        long end = System.currentTimeMillis();
+        return (end - start);
+    }
 }
